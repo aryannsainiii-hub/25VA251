@@ -8,13 +8,40 @@
 <body>
     <script>
 
-        //if
+        //if-else
 
         let age=23;
         if(age>=18){
             console.log("eligible");
         }else{
         console.log("not eligible");
+    }
+
+    //switch statement
+
+    let grade=44;
+    switch(grade){
+        case 'A':result="first division";
+        break;
+     case 'B':result="second division";
+    break;
+     case 'c':result="third division";
+     break;
+     default:result="fail";
+    }
+    console.log(result);
+
+    //else if statement
+
+    let marks =31;
+    if(marks<=33){
+        console.log("third");
+    }
+    else if(marks>33&&marks<60){
+        console.log("secode");
+    }
+    else{
+        console.log("first");
     }
 
     </script>
