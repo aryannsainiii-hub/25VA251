@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+<body>
+        <script>
+            //IIFE-
+
+           (function() {
+  var message = "Hello, world!";
+  console.log(message); 
+})();
+
+//short code for above fnction
+        (msg=>console.log("hello,world"))();
+
+        //local storage-->To set data in JavaScript localStorage, use the localStorage.setItem(key, value) method. This method stores data as persistent, client-side, key-value pairs that remain even after the browser is closed.
+        let myinfo={
+            name:"aryan",
+            age:18,
+            number:3515145,
+            course:"Btech",
+            address:"delhi",
+        };
+        //convert  onject in json string
+        myinfoData=JSON.stringify(myinfo);
+
+        //set the data
+        localStorage.setItem('preference',myinfoData);
+        
+        //get data
+        let myPreferences=localStorage.getItem('preference');
+
+        ////retreve the data and convert into json object
+        let myinfopre=JSON.parse(myPreferences);
+
+        //accesss keys
+        console.log(myinfopre.name);
+
+        //high order function-->a higher-order function is the function that controls the logic and accepts another function
+         let num =[1,2,3,4,8,5,6,7];
+        // let result = num.map(console.log(n=>n*2));
+        // console.log(result);
+
+        //reduce
+
+        //filter
+        let sorting=num.filter(n=>n>3);
+        console.log(sorting);
+
+        //foreach
+        num.forEach((n)=>console.log(n*n));
+        console.log(`updated array is $(num)`);
+
+
+        </script>
+</body>
+</html>
