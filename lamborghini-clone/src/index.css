@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:black;
+  color:white;
+  overflow-x:hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes scroll {
+  from{
+    transform: translateX(0);
+  }
+
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll{
+  animation: scroll 20s linear infinite;
+}
+html{
+  scroll-snap-type:y mandatory;
+}
+
+section,
+footer{
+  scroll-snap-align:start;
+}
+.glass{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border:1px solid rgba(255,255,255,0.1);
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  opacity:0.05;
+  pointer-events:none;
+  z-index:9999;
+}
+html{
+  scroll-behavior:smooth;
+}
