@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your naem" id="inputdata"/>
+    <h2 id="text"></h2>
+    <button ondblclick="changeColor()">click me!!</button>
+        
+    </form>
+    <script>
+    
+    function changeColor(){
+        let inputvalue=document.getElementById("inputdata").value;
+
+        let inputtext=document.getElementById('text')
+        inputtext.innerHTML=inputvalue;
+        inputtext.style.color="red";
+
+        //random colors
+        inputtext.style.backgroundColor="#"+ Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0');
+        }
+                //change para color using addeven listner method
+
+
+    </script>
+    
+</body>
+</html>

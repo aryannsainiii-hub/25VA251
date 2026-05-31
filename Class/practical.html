@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical</title>
+</head>
+<body>
+
+<h1 id="heading">Click Here</h1>
+<script>
+    let heading = document.getElementById("heading");
+
+    // Mouse Over Event
+    heading.onmouseover = function() {
+        heading.innerText = "Mouse is over me!";
+        heading.style.backgroundColor = "yellow";
+        heading.style.fontSize = "40px";
+    };
+
+    // Mouse Out Event
+    heading.onmouseout = function() {
+        heading.innerText = "Hover over me!";
+        heading.style.backgroundColor = "white";
+        heading.style.fontSize = "24px";
+    };
+</script>
+
+</body>
+</html>
+
+
+
+
